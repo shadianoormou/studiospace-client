@@ -1,0 +1,6 @@
+import Link from 'next/link';
+import {Aperture,ArrowRight,SearchX} from 'lucide-react';
+import {Button} from './ui/button';
+export function Loading({cards=false}:{cards?:boolean}){return cards?<div className="studio-grid">{[1,2,3,4,5,6].map(n=><div key={n} className="skeleton-card" aria-hidden="true"><div className="skeleton-image"/><div className="skeleton-line"/><div className="skeleton-line short"/></div>)}<span className="sr-only" role="status">Loading studios</span></div>:<div className="loading-state" role="status"><Aperture className="spin" size={32}/><span>Finding your creative space…</span></div>;}
+export function Empty({title='A little room for possibility',text='Your next creative chapter starts with a space.',href='/studios',label='Explore studios'}:{title?:string;text?:string;href?:string;label?:string}){return <div className="empty-state"><SearchX size={42}/><h2>{title}</h2><p>{text}</p><Button asChild><Link href={href}>{label}<ArrowRight size={16}/></Link></Button></div>;}
+export function ErrorState({message,retry}:{message:string;retry:()=>void}){return <div className="empty-state" role="alert"><h2>Let’s give that another try</h2><p>{message}</p><Button onClick={retry}>Try again</Button></div>;}
