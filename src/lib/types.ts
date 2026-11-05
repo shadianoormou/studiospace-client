@@ -1,0 +1,4 @@
+export type Studio={_id:string;title:string;category:string;hourlyRate:number;securityDeposit:number;maxCapacity:number;location:string;image:string;gallery:string[];amenities:string[];overview:string;ownerId:string;ownerEmail:string;ownerName:string;ownerImage:string;rating:number;reviewCount:number;reviews?:Review[];availability?:{start:string;end:string}[]};
+export type Review={_id:string;name:string;rating:number;comment:string;createdAt:string};
+export type Booking={_id:string;studioId:string;studioTitle:string;studioImage:string;location:string;start:string;end:string;hours:number;hourlyRate:number;subtotal:number;securityDeposit:number;total:number;status:'Pending'|'Confirmed'|'Completed'|'Cancelled';userName:string;userEmail:string;guests:number;note:string};
+export type PageResult={items:Studio[];total:number;page:number;pages:number};
