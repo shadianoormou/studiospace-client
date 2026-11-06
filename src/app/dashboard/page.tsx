@@ -1,0 +1,7 @@
+import Link from 'next/link';
+import {CalendarDays,Building2,Heart,Plus} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Guard} from '@/components/guard';
+import {Bookings} from '@/components/bookings';
+export const metadata={title:'Dashboard'};
+export default function Page(){return <Guard><div className="container section-small"><div className="page-heading"><span className="eyebrow">Welcome to your workspace</span><h1>Your creative dashboard.</h1><p>A single place to move between your bookings, listings, and saved inspiration.</p></div><div className="stats-grid"><div className="stat"><CalendarDays size={22}/><p>Upcoming bookings</p><strong>→</strong></div><div className="stat"><Building2 size={22}/><p>Studios you host</p><strong>→</strong></div><div className="stat"><Heart size={22}/><p>Saved studios</p><strong>→</strong></div></div><div className="panel" style={{marginBottom:30,display:'flex',justifyContent:'space-between',gap:20,alignItems:'center',flexWrap:'wrap'}}><div><h2 style={{fontSize:25}}>Ready to make room?</h2><p style={{marginTop:7,fontSize:13}}>Explore a new space or share one of your own.</p></div><div style={{display:'flex',gap:9,flexWrap:'wrap'}}><Button asChild variant="outline"><Link href="/studios">Explore studios</Link></Button><Button asChild><Link href="/add-studio"><Plus size={15}/>Add a studio</Link></Button></div></div><Bookings/></div></Guard>}
