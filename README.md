@@ -1,6 +1,6 @@
 # StudioSpace — Client
 
-Live site: pending deployment
+Live site: https://studiospace-client-gamma-pink.vercel.app
 
 StudioSpace is a peer-to-peer marketplace for creators to discover and request inspiring studios by the hour.
 
