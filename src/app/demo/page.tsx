@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://studiospace-client-gamma-pink.vercel.app"),
   title: "StudioSpace — Product demo",
   description:
     "A two-minute walkthrough of StudioSpace, a calm marketplace for discovering and booking creative spaces.",
   openGraph: {
+    url: "https://studiospace-client-gamma-pink.vercel.app/demo",
     title: "StudioSpace — Product demo",
     description:
       "See how StudioSpace makes it easier to discover, compare, and book creative spaces.",
     type: "website",
     images: ["/media/studiospace-demo-poster.jpg"],
+    videos: [{ url: "/media/studiospace-demo.mp4", type: "video/mp4", width: 1920, height: 1080 }],
   },
 };
 
