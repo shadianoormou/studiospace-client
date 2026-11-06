@@ -1,2 +1,8 @@
 import Home from '@/components/home';
-export default function Page(){return <Home/>;}
+import DemoPage from './demo/page';
+
+export default async function Page({searchParams}:{searchParams:Promise<{demo?:string}>}){
+  const params=await searchParams;
+  if(params.demo==='video') return <DemoPage/>;
+  return <Home/>;
+}
