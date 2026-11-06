@@ -5,6 +5,7 @@ StudioSpace is a polished marketplace for discovering and booking creative space
 ## Live application
 
 - **Website:** https://studiospace-client-gamma-pink.vercel.app
+- **Demo video:** https://studiospace-client-gamma-pink.vercel.app/media/studiospace-demo.mp4
 - **API:** https://studiospace-server-6at5.onrender.com
 - **Server repository:** https://github.com/shadianoormou/studiospace-server
 
